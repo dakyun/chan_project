@@ -1,0 +1,77 @@
+header{
+    width:100%;
+    height:100vh;
+    background-image:url(../images/rose_main.jpeg),-webkit-linear-gradient(to right, $color-primary 0%, $color-secondary 100%);
+    background-image:url(../images/rose_main.jpeg),-moz-linear-gradient(to right, $color-primary 0%, $color-secondary 100%);
+    background-image:url(../images/rose_main.jpeg),-o-linear-gradient(to right, $color-primary 0%, $color-secondary 100%);
+    background-image:url(../images/rose_main.jpeg),linear-gradient(to right, $color-primary 0%, $color-secondary 100%);
+    background-blend-mode:multiply;
+    background-size:cover;
+    position:relative;
+    @include mq('small-screen-1'){
+        height:80vh;
+        background-repeat:no-repeat;
+        background-position:50%;
+    };
+    @include mq('small-screen-2'){
+        height:75vh;
+        background-repeat:no-repeat;
+        background-position:50%;
+    };
+    @include mq('small-screen-3'){
+        height:65vh;
+        background-repeat:no-repeat;
+        background-position:50%;
+    };
+    
+    #header-text{
+        position:absolute;
+        bottom:5.5rem;
+        animation-name:moveUp;
+        animation-duration:1s;
+        animation-delay:.8s;
+        animation-fill-mode:backwards;
+
+        h1{
+        @include mq('small-screen-1'){
+            font-size:5.5rem
+        };
+        @include mq('small-screen-2'){
+            font-size:5.5rem
+        };
+        @include mq('small-screen-3'){
+            font-size:4.5rem
+        };
+        }
+        &-sub{
+            font-size:4rem;
+            font-weight:500;
+            @include mq('small-screen-1'){
+                font-size:3rem
+            };
+            @include mq('small-screen-2'){
+                font-size:3rem
+            };
+            @include mq('small-screen-3'){
+                font-size:2.4rem
+            };
+        }
+    }
+    #top-menu{
+        position:fixed;
+        top:10rem;
+        right:2rem;
+        font-size:1.2rem;
+        transform:rotate(90deg);
+        z-index:2121;
+        @include mq('small-screen-1'){
+            top:16rem;
+        }
+        @include mq('small-screen-2'){
+            display:none;
+        }
+        @include mq('small-screen-3'){
+            display:none;
+        };
+    }
+}
